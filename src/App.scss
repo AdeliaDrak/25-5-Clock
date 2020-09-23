@@ -1,0 +1,120 @@
+$sbwidth: 15px;
+$primary-font: 'Kalam', cursive;
+$secondary-font: 'Quicksand', sans-serif;
+
+body {
+  background: rgb(185,230,222);
+  background: linear-gradient(90deg, rgba(185,230,222,1) 18%, rgba(226,185,207,1) 82%);
+  color: white;
+  font-family: $secondary-font;
+  height: 100vh;
+  overflow: hidden;
+}
+
+h1 {
+  font-family: $primary-font;
+  font-size: 8vw;
+  color: white;
+  margin-bottom: -3vh;
+}
+
+.nums {
+  font-size: 25px;
+  font-family: $secondary-font;
+  color: white;
+  background: transparent;
+  border: none;
+  width: 30px;
+  text-align: center;
+}
+
+.play-icons {
+  width: 40px;
+}
+
+.num-icons {
+  width: 15px;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#main {
+  margin-left: 30vw;
+  margin-right: 30vw;
+  margin-top: 15vh;
+  margin-bottom: 30vh;
+  font-size: 2vw;
+  text-align: center;
+}
+
+#cd-div { 
+  font-size: 70px;
+}
+
+#author {
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+  #main {
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 50px;
+    width: 50vh;
+    margin-left: -100px;
+  }
+
+  #cd-div {
+    font-size: 60px;
+  }
+
+  .play-icons {
+    width: 20px;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  #main {
+    font-size: 30px;
+  }
+
+  .play-icons {
+    width: 30px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+
+  body {
+    height: 100vh;
+  }
+
+  #main {
+    font-size: 40px;
+  }
+
+  .play-icons {
+    width: 40px;
+  }
+
+  #cd-div {
+    font-size: 100px;
+  }
+
+  h1 {
+    width: 50vh;
+    font-size: 100px;
+    margin-left: 130px;
+  }
+
+  .nums {
+    font-size: 40px;
+    width: 50px;
+  }
+}
