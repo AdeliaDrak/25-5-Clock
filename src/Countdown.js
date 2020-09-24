@@ -77,8 +77,6 @@ class Countdown extends React.Component {
                 reset: false,
                 realTime: this.state.realTime
             });
-         
-            console.log("starting")  
         } 
         
         const interval = setInterval(() => {
@@ -95,10 +93,8 @@ class Countdown extends React.Component {
           clearInterval(interval);
           this.props.play();
           this.startBreak();
-          console.log("break started");
         } else if (this.state.pause === true){
           clearInterval(interval);
-          console.log("cleared");
           return; 
         } 
       }, 1000);
@@ -108,8 +104,6 @@ class Countdown extends React.Component {
         this.setState({
           realTime: this.state.breakLength * 60
         });
-    
-        console.log("starting break")
         const interval = setInterval(() => {
           console.log(this.state.realTime);
           this.setState({
@@ -133,22 +127,17 @@ class Countdown extends React.Component {
         this.setState({
             pause: true
         }); 
-        console.log("paused")  
     }
 
     reset = () => {
         this.setState({
             sessionLength: 25,
             breakLength: 5,
-            //reset: true,
             pause: true,
             realTime: 1501
         });  
         
         document.getElementById("cd-div").innerHTML = "25:00";
-
-        
-        console.log("reset has been clicked");
     }
 
     render(){
